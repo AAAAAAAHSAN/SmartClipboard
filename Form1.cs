@@ -36,6 +36,11 @@ namespace Smart_Clip_Board
         private void btn_Copy2_Click(object sender, EventArgs e)
         {
             string s = richTextBox2.Text;
+            if (String.IsNullOrEmpty(s))
+            {
+                MessageBox.Show("field is empty!!");
+                return;
+            }
             label1.Text = s + " \n is copied";
             Clipboard.SetText(s);
         }
@@ -66,6 +71,43 @@ namespace Smart_Clip_Board
         {
             //MessageBox.Show((trackBar1.Value / 10.0).ToString());
             this.Opacity = trackBar1.Value / 10.0 ;
+        }
+
+        private void btn_Clear1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void btn_Clear2_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Clear();
+        }
+
+        private void btn_Copy3_Click(object sender, EventArgs e)
+        {
+            string s = richTextBox3.Text;
+            if (String.IsNullOrEmpty(s))
+            {
+                MessageBox.Show("field is empty!!");
+                return;
+            }
+            label1.Text = s + " \n is copied";
+            Clipboard.SetText(s);
+        }
+
+        private void btn_Paste3_Click(object sender, EventArgs e)
+        {
+            richTextBox3.Paste();
+        }
+
+        private void btn_Clear3_Click(object sender, EventArgs e)
+        {
+            richTextBox3.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello, I'm AHSAN. Very enthusiastic about software engineering. See my website aaaaaaahsan.github.io for details.");
         }
     }
 }
