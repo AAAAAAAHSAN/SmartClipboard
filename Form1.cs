@@ -107,7 +107,7 @@ namespace Smart_Clip_Board
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello, I'm AHSAN. Very enthusiastic about software engineering. See my website aaaaaaahsan.github.io for details.");
+            MessageBox.Show("Hello, I'm AHSAN. See my website aaaaaaahsan.github.io for details.");
         }
     }
 }
